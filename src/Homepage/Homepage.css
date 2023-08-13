@@ -1,0 +1,17 @@
+.zomatoheader {
+    background-image: url(./image1.avif);
+    background-size: cover;
+    height: 400px;
+}
+
+.homepage-body {
+    margin-top: 50px;
+}
+
+.accord-123{
+  
+    margin-bottom: 50px;  
+    height: 800px;
+    border:2px solid black;
+    background-color: blue;
+  }

@@ -1,0 +1,63 @@
+.foo-body{
+       margin-top: 40%;
+       padding: 50px 0;
+}
+
+.footer-alid{
+ 
+list-style-type:none;
+display: flex;
+flex-direction: column;
+align-items: left;
+justify-content: start;
+padding-left: 0px;
+}
+.footer-alid li a{
+  text-decoration: none;
+}
+
+
+.fd{
+    display: flex;
+}
+.footer-content{
+display: flex;
+justify-content: space-between;
+
+}
+.setfoot{
+  align-items: left;
+}
+.footadj{
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  }
+  .countrydrop{
+    background: transparent;
+  }
+  .countrydrop:hover{
+    background: white;
+    color: black;
+    
+  }
+  .dropdown-toggle{
+    background: transparent;
+    color:black;
+    border: 1px solid grey;
+  }
+
+
+  .dropdown-toggle:hover{
+       color: black;
+    background: transparent;
+    border: 1px solid grey;
+  }
+
+  .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    color: black;
+    background-color: transparent; 
+    border-color:grey;
+}
+ 
+ 

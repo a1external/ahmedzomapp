@@ -1,0 +1,36 @@
+.collection {
+    align-items: left;
+    text-align: left;
+    margin-left: 120px;
+    margin-top: 50px;
+}
+
+.collection-description {
+    display: flex;
+    margin-left:120px;
+    justify-content: space-around;
+    padding: 0 130px;
+}
+
+.card-collection .card-title {
+    position: absolute;
+    top: 280px;
+    color: white;
+    font-size: 19px;
+}
+
+.card-collection  {
+    width: 270px;
+    height: 310px;
+    border-radius: 5%;
+}
+
+.card-img-top{
+    position: absolute;
+    height: 310px;
+    border-radius: 5%;
+  }
+ 
+  
+
+ 

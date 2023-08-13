@@ -1,0 +1,16 @@
+.accordion {
+    position: absolute;
+    margin-left: 110px;
+    width: 1100px;
+    background-color: white;
+ } 
+ 
+ .accordion-item
+ {
+    /* border: 2px solid black; */
+    border-radius: 25px;
+    margin-bottom:30px;
+ 
+}
+
+

@@ -1,0 +1,51 @@
+.app-column {
+    margin-top: 150px;
+}
+
+.appimage {
+    width:280px;
+ margin-top:40px;
+}  
+
+.download-img {
+    display: flex;
+    width: 270px;
+    justify-content: space-between;
+
+}
+
+.download-gp {
+    width: 130px;
+    height: 41px;
+}
+
+.app-p {
+    margin-top: 10px;
+    margin-left: 0px;
+
+}
+
+.phonemail {
+    display: flex;
+    margin-bottom: 10px;
+
+}
+
+.textenter {
+    width: 255px;
+    height: 45px;
+    border-radius: 5px;
+}
+
+.sharelink {
+    width: 135px;
+    height: 45px;
+    border-radius: 5px;
+}
+
+.appdescription {
+    width: fit-content;
+    text-align: left;
+}
+
+

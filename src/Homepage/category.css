@@ -1,0 +1,25 @@
+.horizontal-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Three cards in each row */
+    grid-gap: 20px;
+    /* Adjust as needed to create spacing between cards */
+    overflow-x: auto;
+    /* Enable horizontal scrolling for overflowing cards */
+}
+
+.cardbx {
+    margin-right: 10px;
+    /* Adjust as needed to create spacing between cards */
+    margin-top: 24px;
+
+}
+.meal-image {
+    width: 100%;
+    /* This will make all images have the same width and scale their height proportionally */
+    height: 200px;
+    /* Set a fixed height for the image container */
+    object-fit: cover;
+    /* This ensures the image covers the entire container */
+}
+

@@ -1,0 +1,19 @@
+.popular-box {
+    margin-top: 20px;
+    width: 353px;
+    height: 77px;
+}
+
+.popular-description {
+    margin-top: 100px;
+    text-align: left;
+    margin-left: 115px;
+    font-size: 40px;
+}
+
+.popular-content {
+    text-align: left;
+    margin-left: 12px;
+    padding: 15px 0px 15px 0px;
+    font-weight: 10;
+}

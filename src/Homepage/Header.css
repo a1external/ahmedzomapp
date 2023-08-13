@@ -1,0 +1,11 @@
+  .headercol {
+justify-content: space-between;
+
+}
+.headercol li{
+  color: white;
+}
+.headercol2 li {
+     margin-right: 10px;
+       }
+    
