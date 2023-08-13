@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar,Modal,InputGroup,Form,Button } from 'react-bootstrap';
 import { useGetAllUserDataQuery } from '../Services/apiConfig2';
 import { useNavigate } from 'react-router-dom';
 const Header = () => {
@@ -42,7 +42,7 @@ const Header = () => {
 
   
  
-  // const conditionalHeader = () => {
+  // const conditionalHeader = () => {n
   //   if (data) {
   //     console.log("to go forward i need data", data.email)
   //     sessionStorage.setItem('loginStatus', 'loggedIn');
@@ -74,12 +74,14 @@ const Header = () => {
   //     );
   //   }
   // }
+const handleClose=()=>
+{
 
-
+}
   return (
     <div>
-      // i am adding Modal
-      <Modal centered size="sm" backdrop="static" keyboard="false" show={close} onHide={handleClose}>
+  
+    {/* <Modal centered size="sm" backdrop="static" keyboard="false" show={close} onHide={handleClose}>
       <Modal.Header closeButton>
       <Modal.Title>Modal title</Modal.Title>
       </Modal.Header>
@@ -94,7 +96,7 @@ const Header = () => {
         <Modal.Footer>
         <Button variant="danger">close</Button>
         </Modal.Footer>
-       </Modal>  
+       </Modal>   */}
        // end of Modal
 
       <nav className="navbar navbar-expand-lg navbar-light bg-primary sticky-top">
