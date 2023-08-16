@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export const postingorders = createApi({
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:9101/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://orderapi-si22.onrender.com/' }),
   endpoints: (builder) => ({
     updateData: builder.mutation({
         query:(data)=>{
@@ -13,7 +13,7 @@ export const postingorders = createApi({
         }
                    },
     })
-  }),
+  }), 
 });
 
 export const { useUpdateDataMutation } = postingorders;

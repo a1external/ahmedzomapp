@@ -2,7 +2,7 @@ import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 
 export const loginRegisterApi = createApi({
     reducerPath: "loginRegisterApi",
-    baseQuery: fetchBaseQuery({baseUrl:"http://localhost:5000/",
+    baseQuery: fetchBaseQuery({baseUrl:"https://loginapi-nad5.onrender.com/",
       prepareHeaders: (headers) => {
         const authToken = sessionStorage.getItem('ltk');
         if (authToken) {

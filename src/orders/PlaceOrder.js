@@ -3,11 +3,13 @@ import { useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
 import { useUpdateDataMutation } from '../Services/apiConfig1';
 import Header from '../Homepage/Header';
+import { v4 as uuidv4 } from 'uuid';
 const PlaceOrder = () => {
   const selectedItems = useSelector((state) => state.menuList);
   const [update123, { isloading, iserror }] = useUpdateDataMutation()
   const [totalPrice, setTotalPrice] = useState(0);
-
+  const [orderid, setorderid] = useState()
+  const newUuid = uuidv4();
   const initialFormdata = {
     name: "",
     phone: "",
@@ -17,17 +19,17 @@ const PlaceOrder = () => {
   };
   const [formdata, setFormdata] = useState(initialFormdata)
   
-
   useEffect(() => {
     const newTotalPrice = selectedItems.reduce((total, item) => total + parseFloat(item.menu_price), 0);
     setTotalPrice(newTotalPrice);
     console.log(selectedItems, "bhai i am here");
+     }, [selectedItems]);
+
+
+   useEffect(() => { 
+    setorderid(newUuid);
   }, [selectedItems]);
 
-  useEffect(() => {
-    // This effect will run when the component mounts and whenever the 'formdata' state changes.
-    update123(formdata);
-  }, [formdata]);
   
   if (selectedItems.length === 0) {
     return <div>No items selected.</div>;
@@ -38,21 +40,14 @@ const PlaceOrder = () => {
     const { name, value } = e.target
     setFormdata((prevstate) => ({
       ...prevstate, [name]: value
-
     }))}
 
- 
+       
 
-
- 
-
-
-
-  // const submitorder = (e) => {
-  //   e.preventDefault(); // Prevent the default form submission behavior
-  //   console.log("formdata", formdata);
-  //   update123(formdata);
-  // };
+   const submitorder = () => {
+   
+    update123({...formdata,totalPrice,orderid});
+  };
   return (
     <div>
 <Header/>
@@ -74,9 +69,10 @@ const PlaceOrder = () => {
       {/* onSubmit={submitorder} */}
 
       <form action="http://localhost:4100/paynow" method="POST">
-        <input type='hidden' name='cost' value="123" />
-        <input type='hidden' name='id' value="30" />
-        <input type='hidden' name='hotel_name' value="bajaj finance" />
+        <input type='hidden' name='cost' value= {totalPrice} />
+        <input type='hidden' name='orderid' value= {orderid} />
+        {/* <input type='hidden' name='hotel_name' value="bajaj finance" /> */}
+
         <label>Name</label>
         <input type="text" name="name" required value={formdata.name} onChange={handleChange} />
 
@@ -89,7 +85,7 @@ const PlaceOrder = () => {
         <label>Address</label>
         <input type="text" name="address" required value={formdata.address} onChange={handleChange} />
 
-        <button type="submit">place Order</button>
+        <button type="submit" onClick={submitorder}>place Order</button>
       </form>
 
     </div>

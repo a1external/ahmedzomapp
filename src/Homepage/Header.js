@@ -74,10 +74,10 @@ const Header = () => {
   //     );
   //   }
   // }
-const handleClose=()=>
-{
+// const handleClose=()=>
+// {
 
-}
+// }
   return (
     <div>
   

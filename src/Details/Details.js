@@ -8,7 +8,7 @@ const Details = () => {
   const { data, isLoading } = useGetAllDetailsDatabyidQuery(restaurantId);
   const [details, setDetails] = useState([]);
    const [pro, setpro] = useState()
-  // Update the 'details' state when 'data' changes
+  //Update the 'details' state when 'data' changes
   useEffect(() => {
     if (data) {
       setDetails(data);
